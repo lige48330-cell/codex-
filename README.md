@@ -13,9 +13,18 @@
 - 在线阅读： [Codex 橙皮书](https://vink567.github.io/codex-orange-book/)
 - 新手起步问题： [PROMPTS.md](PROMPTS.md)
 - 第一次运行指南： [first-run-guide.md](first-run-guide.md)
+- CMD 小白教程： [cmd-beginner-guide.md](cmd-beginner-guide.md)
 - 环境检查脚本： [check-codex-env.ps1](check-codex-env.ps1)
 - 兼容入口： [install-codex.ps1](install-codex.ps1)
 - Windows 启动入口： [start-here.cmd](start-here.cmd)
+
+---
+
+## 一键入口
+
+[![下载整包](https://img.shields.io/badge/%E4%B8%8B%E8%BD%BD%E6%95%B4%E5%8C%85-ZIP-blue?style=for-the-badge)](https://github.com/lige48330-cell/codex-/archive/refs/heads/main.zip)
+[![Windows 一键启动](https://img.shields.io/badge/Windows-%E4%B8%80%E9%94%AE%E5%90%AF%E5%8A%A8-green?style=for-the-badge)](start-here.cmd)
+[![CMD 小白教程](https://img.shields.io/badge/CMD-%E5%B0%8F%E7%99%BD%E6%95%99%E7%A8%8B-orange?style=for-the-badge)](cmd-beginner-guide.md)
 
 ---
 
@@ -53,9 +62,11 @@
 
 如果你是 Windows 用户，而且不想先读太多，直接按这个顺序做：
 
-1. 运行 [start-here.cmd](start-here.cmd)
-2. 按 [first-run-guide.md](first-run-guide.md) 走完第一次启动
-3. 再回来看这份页面和原教程
+1. 先点上面的“下载整包”按钮，下载并解压
+2. 如果你不会用 cmd，先看 [cmd-beginner-guide.md](cmd-beginner-guide.md)
+3. 运行 [start-here.cmd](start-here.cmd)
+4. 按 [first-run-guide.md](first-run-guide.md) 走完第一次启动
+5. 再回来看这份页面和原教程
 
 如果你想手动运行 PowerShell 版本，也可以用：
 
