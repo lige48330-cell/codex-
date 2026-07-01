@@ -14,6 +14,7 @@
 - 新手起步问题： [PROMPTS.md](PROMPTS.md)
 - 第一次运行指南： [first-run-guide.md](first-run-guide.md)
 - CMD 小白教程： [cmd-beginner-guide.md](cmd-beginner-guide.md)
+- 常见问题与故障排除： [FAQ.md](FAQ.md)
 - 环境检查脚本： [check-codex-env.ps1](check-codex-env.ps1)
 - 兼容入口： [install-codex.ps1](install-codex.ps1)
 - Windows 启动入口： [start-here.cmd](start-here.cmd)
@@ -25,6 +26,7 @@
 [![下载整包](https://img.shields.io/badge/%E4%B8%8B%E8%BD%BD%E6%95%B4%E5%8C%85-ZIP-blue?style=for-the-badge)](https://github.com/lige48330-cell/codex-/archive/refs/heads/main.zip)
 [![Windows 一键启动](https://img.shields.io/badge/Windows-%E4%B8%80%E9%94%AE%E5%90%AF%E5%8A%A8-green?style=for-the-badge)](start-here.cmd)
 [![CMD 小白教程](https://img.shields.io/badge/CMD-%E5%B0%8F%E7%99%BD%E6%95%99%E7%A8%8B-orange?style=for-the-badge)](cmd-beginner-guide.md)
+[![FAQ](https://img.shields.io/badge/FAQ-%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5-red?style=for-the-badge)](FAQ.md)
 
 ---
 
@@ -92,6 +94,10 @@
 所以更准确的理解是：
 
 **它是“Windows 启动入口”，不是“保证装好的一键安装器”。**
+
+如果你已经卡住了，直接去看：
+
+- [FAQ.md](FAQ.md)
 
 ---
 
