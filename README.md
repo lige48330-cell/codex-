@@ -1,328 +1,233 @@
-# Codex 橙皮书：零基础 5 课上手版
+# Codex 小白入门课
 
-这不是原书全文。  
-这是我基于原教程整理的一份**零基础上手版**，目标很简单：
+这是一份给完全新手看的 Codex 中文入门资料。
 
-**让第一次接触 Codex 的人，不用先懂一堆术语，也能知道它是什么、怎么用、先从哪一步开始。**
+目标不是让你第一天学完所有概念，而是帮你先做到三件事：
 
-原教程作者不是我，我这里只做推荐和压缩导读。
+1. 知道 Codex 大概是什么。
+2. 知道自己第一步该做什么。
+3. 完成一次小任务，获得第一次成功体验。
 
-原教程地址：
+如果你已经会编程，也可以把它当成一份 Codex 上手清单；如果你完全不会代码，也可以从这里开始。
 
-- GitHub： [bozhouDev/codex-orange-book](https://github.com/bozhouDev/codex-orange-book)
-- 在线阅读： [Codex 橙皮书](https://vink567.github.io/codex-orange-book/)
-- 新手起步问题： [PROMPTS.md](PROMPTS.md)
-- 第一次运行指南： [first-run-guide.md](first-run-guide.md)
-- CMD 小白教程： [cmd-beginner-guide.md](cmd-beginner-guide.md)
-- 常见问题与故障排除： [FAQ.md](FAQ.md)
-- 环境检查脚本： [check-codex-env.ps1](check-codex-env.ps1)
-- 兼容入口： [install-codex.ps1](install-codex.ps1)
-- Windows 启动入口： [start-here.cmd](start-here.cmd)
+最后核对日期：2026-07-05。
 
 ---
 
 ## 一键入口
 
-[![下载整包](https://img.shields.io/badge/%E4%B8%8B%E8%BD%BD%E6%95%B4%E5%8C%85-ZIP-blue?style=for-the-badge)](https://github.com/lige48330-cell/codex-/archive/refs/heads/main.zip)
-[![Windows 一键启动](https://img.shields.io/badge/Windows-%E4%B8%80%E9%94%AE%E5%90%AF%E5%8A%A8-green?style=for-the-badge)](start-here.cmd)
-[![CMD 小白教程](https://img.shields.io/badge/CMD-%E5%B0%8F%E7%99%BD%E6%95%99%E7%A8%8B-orange?style=for-the-badge)](cmd-beginner-guide.md)
-[![FAQ](https://img.shields.io/badge/FAQ-%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5-red?style=for-the-badge)](FAQ.md)
+[![下载 ZIP](https://img.shields.io/badge/%E4%B8%8B%E8%BD%BD%20ZIP-%E7%AB%8B%E5%8D%B3%E4%B8%8B%E8%BD%BD-blue?style=for-the-badge)](https://github.com/lige48330-cell/codex-/archive/refs/heads/main.zip)
+[![从这里开始](https://img.shields.io/badge/%E4%BB%8E%E8%BF%99%E9%87%8C%E5%BC%80%E5%A7%8B-30%E5%88%86%E9%92%9F%E8%B7%AF%E7%BA%BF-green?style=for-the-badge)](docs/00-start-here.md)
+[![CMD 小白课](https://img.shields.io/badge/CMD-%E5%B0%8F%E7%99%BD%E8%AF%BE-orange?style=for-the-badge)](docs/04-cmd-for-beginners.md)
+[![排错中心](https://img.shields.io/badge/%E6%8E%92%E9%94%99%E4%B8%AD%E5%BF%83-%E5%85%88%E5%88%AB%E6%85%8C-red?style=for-the-badge)](docs/05-troubleshooting.md)
+
+> 说明：GitHub 页面上的按钮可以帮你下载和跳转文档，**不能直接在网页里运行 `start-here.cmd`**。  
+> 正确方式是：**先下载 ZIP，解压后，再在本地双击 `start-here.cmd`。**
 
 ---
 
-## 先说清楚：这套东西支持什么，不支持什么
+## 第一次来，先做这两步
 
-这套仓库当前的自动化入口，**主要面向 Windows + PowerShell**。
+第一次来只看这一节就够了：先把文件放对位置，再按一条路线往下读。
 
-也就是说：
+### 第 1 步：如果你在 GitHub，先下载并解压
 
-- `check-codex-env.ps1` 是 Windows PowerShell 脚本
-- `start-here.cmd` 也是 Windows 专用入口
-- 如果你用的是 macOS / Linux，这套仓库里的脚本不会直接适配你
+1. 在 GitHub 页面点击绿色的 `Code`。
+2. 选择 `Download ZIP`。
+3. 把下载到的 ZIP 文件完整解压，不要在压缩包预览里直接运行脚本。
+4. 打开解压后的文件夹，确认能看到这些内容：
 
-如果你不是 Windows 用户，建议你：
+```text
+README.md
+docs
+start-here.cmd
+check-codex-env.ps1
+```
 
-1. 直接看官方 Codex Quickstart  
-   [https://developers.openai.com/codex/quickstart](https://developers.openai.com/codex/quickstart)
-2. 再把这份仓库里的文档当成中文导读来用
+看到这些文件后，你才算进入了课程根目录。后面教程里的路径示例都请换成你自己解压后的文件夹路径。
 
----
+GitHub 下载下来的 ZIP 名字可能带有仓库名、分支名或一串后缀，不一定正好叫 `codex-github-release.zip`。只要解压后能看到上面这些文件，就是正常的。
 
-## 这份页面是干什么的
+如果你拿到的是别人转发的 ZIP，也只解压一次，优先打开里面的 `README.md`。不要在多个 ZIP、多个同名文件夹之间来回切换。
 
-如果你现在是纯新手，这一页不是让你“学会全部”，而是让你先完成 3 件事：
+### 第 2 步：按这一条阅读路线走
 
-1. 先理解 Codex 大概是什么
-2. 先知道怎么让它尽早用起来
-3. 先完成第一次小成功
+如果你是第一次学习 Codex，默认只按这个顺序走：
 
-做到这三件事，你再去看原教程，就不会那么云里雾里。
+```text
+README.md
+docs/00-start-here.md
+docs/01-what-is-codex.md
+docs/02-first-run.md
+docs/03-first-prompts.md
+```
 
----
+如果你不会 CMD / PowerShell，读到 `docs/02-first-run.md` 需要运行命令时，临时跳去补一页 `docs/04-cmd-for-beginners.md`，补完再回到 `docs/02-first-run.md`。
 
-## 现在就开始
-
-如果你是 Windows 用户，而且不想先读太多，直接按这个顺序做：
-
-1. 先点上面的“下载整包”按钮，下载并解压
-2. 如果你不会用 cmd，先看 [cmd-beginner-guide.md](cmd-beginner-guide.md)
-3. 运行 [start-here.cmd](start-here.cmd)
-4. 按 [first-run-guide.md](first-run-guide.md) 走完第一次启动
-5. 再回来看这份页面和原教程
-
-如果你想手动运行 PowerShell 版本，也可以用：
-
-- [check-codex-env.ps1](check-codex-env.ps1)
-
-这套仓库的定位不是替代原教程，  
-而是帮你先把第一步走通。
+看到其他额外文件或目录时，先不要点进去。小白第一天只需要走通上面这条主线。
 
 ---
 
-## Windows 启动入口什么时候可能不行
+## 如果你今天只想做一件事
 
-`start-here.cmd` 只是一个**Windows 启动入口**，不是保证成功的“一键安装器”。
+那就只做这一件：
 
-它可能失败的常见情况包括：
+1. 下载 ZIP
+2. 解压
+3. 打开 [从这里开始](docs/00-start-here.md)
+4. 跟着做完一次环境检查
 
-- 你的机器没有可用的 `powershell` 命令
-- 企业设备或安全软件拦截了 `ExecutionPolicy Bypass`
-- 你的系统策略不允许脚本启动
-- 你把文件移动到了不完整的位置，导致相对路径失效
-- `codex` 命令虽然存在，但实际上不可运行
-
-所以更准确的理解是：
-
-**它是“Windows 启动入口”，不是“保证装好的一键安装器”。**
-
-如果你已经卡住了，直接去看：
-
-- [FAQ.md](FAQ.md)
+这就已经足够了。
 
 ---
 
-## 这份页面适合谁
+## 有明确问题时查这里
 
-适合下面这几类人：
+如果你已经知道自己卡在哪里，可以直接查这一表。否则就按上面的默认路线走。
 
-- 完全没接触过 Codex 的人
-- 对 AI 工具感兴趣，但不知道从哪开始的人
-- 不懂代码，也想知道它能不能帮到自己的人
-- 想先快速判断原教程值不值得读的人
-
----
-
-## 开始前，你不需要先会什么
-
-先放心，这些你都**不需要先会**：
-
-- 不需要会写代码
-- 不需要先懂 Git
-- 不需要先懂 GitHub
-- 不需要先懂 VS Code
-- 不需要先懂 CLI、MCP、Skill 这些词
-
-你现在只需要先搞清楚：
-
-- 它是什么
-- 它能帮我做什么
-- 我怎么尽早开始用
+| 你的情况 | 先看哪里 | 目标 |
+|---|---|---|
+| 我完全不懂 Codex | [从这里开始](docs/00-start-here.md) | 先走一遍 30 分钟路线 |
+| 我想先知道 Codex 是什么 | [Codex 是什么](docs/01-what-is-codex.md) | 建立正确理解 |
+| 我想马上跑第一次 | [第一次运行](docs/02-first-run.md) | 完成环境检查和第一次启动 |
+| 我不知道第一句问什么 | [第一次提问](docs/03-first-prompts.md) | 复制提示词直接试 |
+| 我不会 CMD / PowerShell | [命令行小白课](docs/04-cmd-for-beginners.md) | 学会打开窗口、进入文件夹、运行脚本 |
+| 我卡住了 | [排错中心](docs/05-troubleshooting.md) | 按症状排查 |
+| 我想理解 Agent、Skill、MCP | [Agent 基础](docs/06-agent-basics.md)，再看 [Skill](docs/07-skills.md) / [MCP](docs/08-mcp.md) | 进入进阶概念 |
 
 ---
 
-## 课程路线：5 课够你先上手
+## 30 分钟首次成功路线
 
-这 5 课不是完整课程，而是最短上手路线。  
-你按这个顺序看，会比直接扎进原教程舒服很多。
+如果你不知道从哪开始，就按这个顺序来：
 
----
+1. 读 [从这里开始](docs/00-start-here.md)，先知道今天只做什么。
+2. 读 [Codex 是什么](docs/01-what-is-codex.md)，用人话理解它。
+3. 读 [第一次运行](docs/02-first-run.md)，选择入口并尝试环境检查。
+4. 如果你在这一步发现自己不会 CMD / PowerShell，先跳去 [命令行小白课](docs/04-cmd-for-beginners.md)，补完再回到第 3 步。
+5. 打开 [第一次提问](docs/03-first-prompts.md)，复制一条提示词，完成一个小任务。
+6. 如果失败，不要硬猜，去 [排错中心](docs/05-troubleshooting.md) 按症状查。
 
-## 第 1 课：先用一句人话理解 Codex
+命令行课是分支，不是新的主线。只在你卡在打开 CMD、进入文件夹或运行脚本时再去看。
 
-你可以先把 Codex 理解成：
+第一次成功不需要做大项目。
 
-**一个不只是会回答问题，还会陪你把事情往前推进的 AI 助手。**
+你只需要完成类似这样的事情：
 
-普通聊天 AI 更像“你问，它答”。  
-Codex 更像“你给它一个目标，它帮你理解、整理、拆步骤、开始做事”。
-
-所以它的价值不只是“解释”，还包括：
-
-- 帮你把模糊想法理清
-- 帮你把复杂内容讲简单
-- 帮你把一件事拆成步骤
-- 帮你整理文档、说明、页面文案
-- 帮你比较不同做法
-- 帮你减少卡住的时间
-
-**学完这一课，你至少要得到一个感觉：它不是普通聊天框，而是一个更偏“做事”的助手。**
+- 让 Codex 总结一段文字。
+- 让 Codex 把一段难懂的话改写成小白版。
+- 让 Codex 帮你把一个模糊想法整理成步骤。
+- 让 Codex 解释一个报错，并告诉你下一步。
 
 ---
 
-## 第 2 课：先理解它为什么对普通人也有用
+## 课程目录
 
-很多人第一次看到 Codex，会下意识觉得：
+### 第一部分：先上手
 
-“这是不是给程序员用的？”
+1. [从这里开始](docs/00-start-here.md)
+2. [Codex 是什么](docs/01-what-is-codex.md)
+3. [第一次运行](docs/02-first-run.md)
+4. [第一次提问](docs/03-first-prompts.md)
 
-不完全是。
+### 第二部分：先排除门槛
 
-就算你不会代码，Codex 也可以先帮你做很多非常实际的事：
+5. [命令行小白课](docs/04-cmd-for-beginners.md)
+6. [排错中心](docs/05-troubleshooting.md)
 
-- 把一个模糊想法整理成清楚步骤
-- 把一篇复杂教程改写成小白能看懂的话
-- 帮你起草一份说明文档、分享页、介绍文案
-- 帮你拆一个任务，告诉你先做哪一步
-- 帮你比较两个方案，看看哪个更适合你
+### 第三部分：再理解进阶概念
 
-所以对新手来说，它最直接的价值其实是两块：
-
-- **创造力**：帮你把模糊的东西变清楚
-- **生产力**：帮你把卡住的事情往前推
-
-**学完这一课，你要知道：就算不会代码，你也已经可以开始用它做事。**
+7. [Agent 基础](docs/06-agent-basics.md)
+8. [Skill 入门](docs/07-skills.md)
+9. [MCP 入门](docs/08-mcp.md)
+10. [下一步资源](docs/09-next-resources.md)
 
 ---
 
-## 第 3 课：先解决真正会卡住你的事
+## Windows 工具和下载
 
-很多新手真正卡住的，不是“看不懂”，而是：
+这个仓库里保留了几个 Windows 友好的辅助文件：
 
-- 我到底从哪里开始用？
-- 为什么别人能用，我这里不顺？
-- 默认方式不行，还有没有别的办法？
+- [start-here.cmd](start-here.cmd)：Windows 启动入口。
+- [check-codex-env.ps1](check-codex-env.ps1)：环境检查脚本。
 
-这就是为什么我建议你**尽早去看原教程里的 `CC Switch` 和 API 接入方式**。
+请注意：
 
-你现在先不用深入研究原理，只要先知道：
-
-- `CC Switch` 是一种切换接入方式的思路
-- `API` 可以先理解成“让工具连上 AI 能力的连接方式”
-
-最重要的是这句话：
-
-**默认方式不顺，不代表你学不会，很多时候只是接入方式还没选对。**
-
-所以如果你读原教程，我最建议你提前关注的就是这块，而不是等到后面再碰到。
-
-**学完这一课，你要知道：先让工具用起来，比先搞懂所有概念更重要。**
+- `start-here.cmd` 不是保证成功的一键安装器。
+- `check-codex-env.ps1` 主要做环境检查，不会替你解决所有系统问题。
+- 本仓库的默认路线不依赖第三方安装包，也不把旧教程或第三方资料当作第一入口。
+- 请先完整解压整个仓库，再运行脚本；不要在 ZIP 压缩包预览里双击脚本。
+- Windows 企业设备、安全策略、PowerShell 执行策略、网络环境都可能影响结果。
+- 如果脚本失败，先看 [排错中心](docs/05-troubleshooting.md)，再看官方文档。
 
 ---
 
-## 第 4 课：第一次不要做大项目，先做小任务
+## 这套资料支持什么
 
-第一次最适合做的，不是：
+当前主线面向：
 
-- 帮我做个网站
-- 帮我做个系统
-- 帮我完成一个项目
+- 完全新手。
+- 中文读者。
+- 想先学 Codex 的用户。
+- Windows 用户，尤其是不熟悉 CMD / PowerShell 的用户。
 
-这种任务太大了，新手很容易越问越乱。
+当前不做这些承诺：
 
-第一次更适合做这些小任务：
+- 不承诺一键安装成功。
+- 不替代官方文档。
+- 不默认推荐第三方账号绕过、二进制替换、越权配置或 jailbreak。
+- 不把 MCP、Skill、Subagent 当成第一天必须学的内容。
 
-1. 总结一篇文章
-2. 改写一段难懂的话
-3. 整理一个模糊想法
-4. 拆一件事情的步骤
-5. 写一段更清楚的说明
+这套资料的定位是：
 
-这 5 件事有一个共同点：  
-**都不要求你懂代码，但都能让你很快感受到 Codex 的价值。**
-
-**学完这一课，你至少应该先挑一件小事亲手试一下。**
+> 先帮你走通第一步，再把你送回官方路径和更完整的教程。
 
 ---
 
-## 第 5 课：再回头看原教程，顺序会更对
+## 和原资料的关系
 
-当你已经知道：
+本仓库参考并导读了《Codex 橙皮书》及社区教程，但不是原书全文。
 
-- Codex 大概是什么
-- 它对普通人也有用
-- `CC Switch` 和 API 为什么要尽早看
-- 第一次应该先做小任务
+原教程：
 
-这时候你再去看原教程，建议按这个顺序：
+- [bozhouDev/codex-orange-book](https://github.com/bozhouDev/codex-orange-book)
+- [Codex 橙皮书在线阅读](https://vink567.github.io/codex-orange-book/)
 
-1. 先看“Codex 是什么”
-2. 再看“怎么开始使用”
-3. 提前去看 `CC Switch` 和 API 相关内容
-4. 再看工作流
-5. 最后看案例
-
-一句话就是：
-
-**先理解，再接通，再上手，最后再深入。**
+建议你先用本仓库完成第一次小成功，再回去系统读原教程。
 
 ---
 
-## 官方当前入口
+## 官方入口
 
-如果你想直接走官方当前路径，可以看这些：
+Codex 变化很快。安装、登录、Windows 支持、Skill、MCP 等信息，以官方文档为准：
 
-- Codex 首页： [https://chatgpt.com/codex/](https://chatgpt.com/codex/)
-- Codex Quickstart： [https://developers.openai.com/codex/quickstart](https://developers.openai.com/codex/quickstart)
-- Codex Windows 文档： [https://developers.openai.com/codex/app/windows](https://developers.openai.com/codex/app/windows)
-- Codex Troubleshooting： [https://developers.openai.com/codex/app/troubleshooting](https://developers.openai.com/codex/app/troubleshooting)
-
-这份仓库更像是：  
-**先帮你把第一步走通，再把你送回官方路径和原教程。**
+- [Codex 首页](https://chatgpt.com/codex/)
+- [Codex Quickstart](https://developers.openai.com/codex/quickstart)
+- [Codex Windows 文档](https://developers.openai.com/codex/app/windows)
+- [Codex Customization](https://developers.openai.com/codex/concepts/customization)
+- [Codex Troubleshooting](https://developers.openai.com/codex/app/troubleshooting)
 
 ---
 
-## 这份《Codex 橙皮书》原教程主要讲什么
+## 其他资料
 
-原教程大体上覆盖这些内容：
+如果你是第一次来，优先按上面的课程目录走，不要一开始翻所有文件。
 
-1. Codex 是什么，它和别的 AI 工具有什么区别
-2. 怎么安装、配置、进入使用界面
-3. 它有哪些核心能力
-4. 实际使用时应该怎么配合它
-5. 它能拿来做什么
-6. 一些实战案例
-
-它的优点不是只讲某个零散功能，  
-而是把“认知、使用、工作流、案例”串成了一条线。
+如果你在别的地方看到旧教程、第三方安装包、MCP 配置示例、Skill 大包或其他 Agent 生态资料，先把它们当作背景材料，不要当成 Codex 小白第一天的默认路线。
 
 ---
 
-## 先完成第一次小成功
+## 给完全新手的一句话
 
-如果你看完这页，还是不知道该怎么开始，那就从下面任意一件开始：
+不要急着先懂所有术语。
 
-- 让它把一篇教程总结成小白版
-- 让它把一个模糊想法整理成步骤
-- 让它帮你写一段更清楚的介绍文字
-- 让它帮你比较两个做法的优缺点
-- 让它告诉你一件事的第一步该怎么开始
-
-这就是最适合新手的第一次使用方式。
+先让 Codex 帮你完成一件很小的事。  
+只要这一步走通，后面的概念就会慢慢有意义。
 
 ---
 
-## 配套起步问题
+## License
 
-如果你已经准备开始问了，直接去看这个文件：
+This repository and release package are provided under an all-rights-reserved notice. See [LICENSE](LICENSE).
 
-- [PROMPTS.md](PROMPTS.md)
-
-里面不是一堆散模板，而是“第一轮最值得问的几句”。
-
----
-
-## 一句话总结
-
-如果你想找一份**中文、系统、适合从陌生到入门了解 Codex 的资料**，  
-这份《Codex 橙皮书》值得收藏。
-
-而对纯新手来说，我最重要的补充建议只有一句：
-
-**别急着先学全，先让自己完成第一次小成功。**
-
----
-
-## 原教程地址
-
-- GitHub： [bozhouDev/codex-orange-book](https://github.com/bozhouDev/codex-orange-book)
-- 在线阅读： [Codex 橙皮书](https://vink567.github.io/codex-orange-book/)
+本仓库和发布包采用保留全部权利的授权声明。请查看 [LICENSE](LICENSE)。

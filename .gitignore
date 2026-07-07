@@ -1,0 +1,15 @@
+_internal/
+.agents/
+.codex/
+安装包/
+1.入门/
+2.skill/
+3.MCP/
+codex-quickstart-package/
+codex-quickstart-package.zip
+_release/
+*.exe
+*.dmg
+*.7z
+*.rar
+*.log
