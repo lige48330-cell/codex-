@@ -35,6 +35,7 @@
 | [Codex Quickstart](https://developers.openai.com/codex/quickstart) | 第一次正式上手 Codex |
 | [Codex Windows 文档](https://developers.openai.com/codex/app/windows) | 查看当前 Windows app、终端、sandbox、WSL2 等支持说明 |
 | [Codex Customization](https://developers.openai.com/codex/concepts/customization) | 查看当前 AGENTS.md、Memories、Skills、MCP、Subagents 等定制概念 |
+| [AGENTS.md 指南](https://developers.openai.com/codex/guides/agents-md) | 查看项目指令文件的当前用法 |
 | [Codex Troubleshooting](https://developers.openai.com/codex/app/troubleshooting) | 官方排错和恢复模式 |
 
 官方 Customization 页会说明 Codex 的定制能力。你可以先按下面几类粗略理解，具体名称和范围以当前官方页面为准：
@@ -68,6 +69,7 @@
 | [07-skills](./07-skills.md) | Skill 入门 | 进阶可选 |
 | [08-mcp](./08-mcp.md) | MCP 入门 | 进阶可选 |
 | [09-next-resources](./09-next-resources.md) | 下一步资源 | 学完后查阅 |
+| [10-sources-and-update-notes](./10-sources-and-update-notes.md) | 教程来源与更新说明 | 查阅资料时使用 |
 
 ---
 
@@ -131,6 +133,7 @@
 - 代码规范。
 - 审查要求。
 - 不要碰的文件或行为。
+- 危险操作必须先确认。
 
 补充理解：
 

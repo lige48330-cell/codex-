@@ -10,7 +10,7 @@
 
 如果你已经会编程，也可以把它当成一份 Codex 上手清单；如果你完全不会代码，也可以从这里开始。
 
-最后核对日期：2026-07-05。
+最后核对日期：2026-07-14。
 
 ---
 
@@ -141,6 +141,7 @@ docs/03-first-prompts.md
 8. [Skill 入门](docs/07-skills.md)
 9. [MCP 入门](docs/08-mcp.md)
 10. [下一步资源](docs/09-next-resources.md)
+11. [教程来源与更新说明](docs/10-sources-and-update-notes.md)
 
 ---
 
